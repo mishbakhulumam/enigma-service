@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .section-min-height {
+        min-height: calc (100vh - 68px)
+    }
+
+    .toggle-btn {
+        @apply [&>div::before]:translate-y-0 [$>div::before]:rotate-45 
+        [&>div::after]:translate-y-0 [$>div::after]:-rotate-45 [&>div]:bg-transparent
+    }
+}
+
+/* whatsapp button */
+.fixed-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    z-index: 9999;
+    text-align: center;
+}
+
+.fixed-whatsapp:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: #00C853;
+    position: absolute;
+    border-radius: 100%;
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .12), 0 1px 1px 0 rgba(0, 0, 0, .24);
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.fixed-whatsapp svg {
+    vertical-align: middle;
+    /* position: fixed; */
+    right: -8px;
+    bottom: -5px;
+    z-index: 2;
+    position: relative;
+}
+
+.fixed-whatsapp:after {
+    content: "Hubungi Kami";
+    width: 100px;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 10px;
+    right: -150px;
+    text-align: right;
+    color: #555;
+    border: 1px solid #dedede;
+    background: rgba(255,255,255,.5);
+    border-radius: 4px;
+    opacity: 0;
+    transition:all .4s ease-in-out;
+    font-size: 90%;
+    line-height: 1.1;
+}
+
+.fixed-whatsapp:hover:after {
+    opacity: 1;
+    right: 0;
+}
