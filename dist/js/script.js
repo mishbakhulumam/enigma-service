@@ -17,22 +17,22 @@ document.addEventListener('DOMContentLoaded', initApp);
 
 
 // map on load
-function initialize() {
-    var propertiPeta = {
-        center: new google.maps.LatLng(-6.8932616, 112.4427847, 15),
-        zoom: 14,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
+// function initialize() {
+//     var propertiPeta = {
+//         center: new google.maps.LatLng(-6.8932616, 112.4427847, 15),
+//         zoom: 14,
+//         mapTypeId: google.maps.MapTypeId.ROADMAP
+//     };
 
-    var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
+//     var peta = new google.maps.Map(document.getElementById("googleMap"), propertiPeta);
 
-    // membuat Marker
-    var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(-6.892048, 112.453798),
-        map: peta
-    });
+//     // membuat Marker
+//     var marker = new google.maps.Marker({
+//         position: new google.maps.LatLng(-6.892048, 112.453798),
+//         map: peta
+//     });
 
-}
+// }
 
 // event jendela di-load
-google.maps.event.addDomListener(window, 'load', initialize);
+// google.maps.event.addDomListener(window, 'load', initialize);
